@@ -10,12 +10,25 @@
   /* breakpoint */
   --mobile-breakpoint: 576px;
   --tablet-breakpoint: 768px;
+  --laptop-breakpoint: 1024px;
 
 }
+
+h1 {
+  font-size: 72px;
+  background: linear-gradient(to bottom, #194c33, #bbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+
 
 h3 {
   font-size: 22px;
 }
+
+
 
 
 
@@ -62,7 +75,17 @@ li {
   justify-content: space-between;
 }
 
+@media(max-width: 1024px) {
+  h1 {
+    font-size: 54px;
+  }
+}
+
 @media(max-width: 768px) {
+  h1 {
+    font-size: 34px;
+  }
+
   .container {
     padding: 10px 10px 10px 10px;
   }
