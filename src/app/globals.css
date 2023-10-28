@@ -1,7 +1,10 @@
 :root {
   /* colors */
   --bg-black: #000000;
+  --bg-green: #006345;
   --font-white: #FFFFFF;
+
+
 
   --btn: #006345;
   --btn-hover: #00442f;
@@ -28,6 +31,11 @@ h3 {
   font-size: 22px;
 }
 
+p {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: justify;
+}
 
 
 
