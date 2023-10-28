@@ -1,17 +1,25 @@
+"use client";
+
 import { LINKS } from "@/constants/links/links";
 import Link from "next/link";
 
+import styles from "./page.module.css";
+import Button from "../button/button";
+
 const Navbar = () => {
   return (
-    <nav>
-      <Link href="/">My App</Link>
-      <div>
+    <nav className={styles.navbar}>
+      <Link href="/" className={styles.logo}>
+        <h3>My App</h3>
+      </Link>
+      <ul className={styles.links}>
         {LINKS.map((link) => (
-          <Link href={link.url} key={link.id}>
-            {link.title}
-          </Link>
+          <li key={link.id} className={styles.link}>
+            <Link href={link.url}>{link.title}</Link>
+          </li>
         ))}
-      </div>
+        <Button onClick={() => console.log("logout")}>Logout</Button>
+      </ul>
     </nav>
   );
 };

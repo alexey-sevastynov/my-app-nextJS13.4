@@ -1,0 +1,45 @@
+.navbar {
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.logo {
+
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.logout {
+    padding: 5px;
+    border: none;
+    background-color: var(--font-white);
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+
+        flex-direction: column;
+
+
+        gap: 20px;
+    }
+}
