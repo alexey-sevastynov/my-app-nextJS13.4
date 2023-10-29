@@ -1,8 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useContext } from "react";
 import styles from "./darkModeToggle.module.css";
+import { ThemeContext, ThemeContextData } from "@/context/ThemeContext";
 
 const DarkModeToggle = () => {
-  let mode: "dark" | "light" = "light";
+  const { toggle, mode } = useContext<ThemeContextData>(ThemeContext); // ругается ts ThemeContext
 
   const ballStyles = () => {
     if (mode === "light") {
@@ -13,7 +16,7 @@ const DarkModeToggle = () => {
     }
   };
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={toggle}>
       <div className={styles.icon}>🌙</div>
       <div className={styles.icon}>🔆</div>
       <div className={styles.ball} style={ballStyles()}></div>
