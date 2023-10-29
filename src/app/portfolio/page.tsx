@@ -7,14 +7,14 @@ const Portfolio = () => {
     <section className={styles.portfolio}>
       <h2 className={styles.selectTitle}>Choose a galary</h2>
       <div className={styles.items}>
-        <Link href="portfolio/ilustrations" className={styles.item}>
-          <span className={styles.title}>Ilustrations</span>
+        <Link href="portfolio/illustrations" className={styles.item}>
+          <span className={styles.title}>Illustrations</span>
         </Link>
-        <Link href="portfolio/website" className={styles.item}>
-          <span className={styles.title}>Website</span>
+        <Link href="portfolio/websites" className={styles.item}>
+          <span className={styles.title}>Websites</span>
         </Link>
-        <Link href="portfolio/aplication" className={styles.item}>
-          <span className={styles.title}>Aplication</span>
+        <Link href="portfolio/applications" className={styles.item}>
+          <span className={styles.title}>Applications</span>
         </Link>
       </div>
     </section>
