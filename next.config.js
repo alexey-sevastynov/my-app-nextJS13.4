@@ -12,6 +12,11 @@ const nextConfig = {
       },
     ],
   },
+  experimental: {
+    appDir: true,
+    esmExternals: "loose", // <-- add this
+    serverComponentsExternalPackages: ["mongoose"], // <-- and this
+  },
 };
 
 module.exports = nextConfig;
