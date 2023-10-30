@@ -2,7 +2,10 @@ import Post from "@/models/Post";
 import connect from "@/utils/db";
 import { NextRequest, NextResponse } from "next/server";
 
-export const GET = async (request: NextRequest, { params }: any) => {
+export const GET = async (
+  request: NextRequest,
+  { params }: GenerateMetadataType
+) => {
   const { id } = params;
   try {
     await connect();
