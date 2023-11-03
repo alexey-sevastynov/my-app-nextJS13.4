@@ -26,7 +26,12 @@ const Navbar = () => {
         ))}
 
         {session.status === "authenticated" && (
-          <button onClick={signOut}>Logout ({nameUser})</button>
+          // почему ругается на onClick?
+          <button
+            onClick={signOut as React.MouseEventHandler<HTMLButtonElement>}
+          >
+            Logout ({nameUser})
+          </button>
         )}
       </ul>
     </nav>

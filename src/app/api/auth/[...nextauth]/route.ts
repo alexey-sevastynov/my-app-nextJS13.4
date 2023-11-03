@@ -14,12 +14,19 @@ const handler = NextAuth({
     CredentialsProvider({
       id: "credentials",
       name: "Credentials",
+      credentials: {
+        email: { label: "Email", type: "text" },
+        password: { label: "Password", type: "password" },
+      },
 
-      async authorize(credentials: {
-        email: string;
-        name: string;
-        password: string;
-      }) {
+      //@ts-ignore
+      async authorize(
+        credentials: {
+          email: string;
+          password: string;
+        },
+        request
+      ) {
         await connect();
         try {
           const user = await User.findOne({ email: credentials.email });
