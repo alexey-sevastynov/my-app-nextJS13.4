@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "@/components/button/button";
 import styles from "./page.module.css";
 import Link from "next/link";
@@ -9,12 +11,14 @@ export default function Home() {
   return (
     <main className={styles.home}>
       <div className={styles.item}>
-        <h1>The future of AI in the next few years</h1>
+        <h1 className={styles.title}>
+          Mastering the Art of Full-Stack Magic with Next.js
+        </h1>
         <p className={styles.desc}>
-          Turning your Idea into Reality. We bring together the teams from the
-          global tech industry.
+          Next.js 13 and MongoDB Unite: Crafting a Full-Stack Wonder for
+          Ultimate Web Solutions
         </p>
-        <Link href="/portfolio">
+        <Link href="/portfolio" className={styles.link}>
           <Button>See our Works</Button>
         </Link>
       </div>

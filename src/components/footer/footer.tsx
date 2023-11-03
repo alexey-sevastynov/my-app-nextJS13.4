@@ -14,8 +14,8 @@ const Footer = () => {
           <Link href={icon.link} key={icon.id} target="_blank">
             <Image
               src={icon.src}
-              width={15}
-              height={15}
+              width={30}
+              height={30}
               className={styles.icon}
               alt={icon.alt}
             />

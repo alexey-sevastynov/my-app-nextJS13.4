@@ -12,6 +12,10 @@
 }
 
 
+.link {
+  margin: 0 auto;
+}
+
 .img {
   width: 100%;
   height: 500px;
@@ -37,6 +41,10 @@
 @media(max-width: 1024px) {
   .home {
     flex-direction: column-reverse;
+  }
+
+  .title {
+    text-align: center;
   }
 }
 

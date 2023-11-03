@@ -1,3 +1,16 @@
+.footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
 .button {
     padding: 5px;
     border: none;

@@ -6,7 +6,7 @@
   --font-white: #FFFFFF;
   --font-black: #000000;
 
-
+  --gray: #bbb;
 
   --btn: #006345;
   --btn-hover: #00442f;
@@ -20,8 +20,8 @@
 }
 
 h1 {
-  font-size: 72px;
-  background: linear-gradient(to bottom, #194c33, #bbb);
+  font-size: 48px;
+  background: linear-gradient(to bottom, var(--bg-green), var(--gray));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -101,6 +101,16 @@ li {
 .dark {
   background-color: var(--bg-black);
   color: var(--font-white);
+}
+
+
+
+/* _________auth */
+.auth {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(226, 71, 94);
+  background: linear-gradient(0deg, rgba(226, 71, 94, 1) 0%, rgba(110, 59, 217, 1) 100%);
 }
 
 @media(max-width: 1024px) {
