@@ -10,8 +10,6 @@ const Login = () => {
   const session = useSession();
   const router = useRouter();
 
-  console.log(session);
-
   if (session.status == "loading") {
     return <p>Loading</p>;
   }
@@ -31,12 +29,8 @@ const Login = () => {
       const email = emailInput.value;
       const password = passwordInput.value;
 
-      console.log(email, password);
-
       signIn("credentials", { email, password });
     }
-
-    console.log(emailInput, passwordInput, "null");
   };
 
   return (

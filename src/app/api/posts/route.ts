@@ -9,8 +9,6 @@ export const GET = async (request: NextRequest) => {
   try {
     await connect();
 
-    console.log(username);
-
     if (!username) {
       const posts = await Post.find();
       return new NextResponse(JSON.stringify(posts), { status: 200 });

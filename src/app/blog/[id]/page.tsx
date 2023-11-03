@@ -1,12 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { notFound } from "next/navigation";
 
 async function getData(id: string) {
-  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
-    cache: "no-store",
-  });
+  // const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
+  const res = await fetch(
+    `https://my-app-next-alexey10031994.vercel.app/api/posts/${id}`,
+    {
+      cache: "no-store",
+    }
+  );
 
   if (!res.ok) {
     throw new Error("failed to fetch data!");
@@ -30,8 +33,8 @@ const BlogId = async ({ params }: { params: { id: string } }) => {
     <section className={styles.container}>
       <div className={styles.top}>
         <div className={styles.info}>
-          <h2 className={styles.title}>{data.title}</h2>
-          <p className={styles.desc}>{data.desc}</p>
+          <h2 className={styles.title}>{"data.title"}</h2>
+          <p className={styles.desc}>{"data.desc"}</p>
           <div className={styles.author}>
             <Image
               src={data.image}
@@ -40,7 +43,7 @@ const BlogId = async ({ params }: { params: { id: string } }) => {
               height={40}
               className={styles.avatar}
             />
-            <span className={styles.username}>{data.userName}</span>
+            <span className={styles.username}>{"data.userName"}</span>
           </div>
         </div>
         <div className={styles.imageContainer}>
@@ -53,7 +56,7 @@ const BlogId = async ({ params }: { params: { id: string } }) => {
         </div>
       </div>
       <div className={styles.content}>
-        <p className={styles.text}>{data.content}</p>
+        <p className={styles.text}>{"data.content"}</p>
       </div>
     </section>
   );

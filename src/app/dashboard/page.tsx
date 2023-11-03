@@ -21,8 +21,6 @@ const Dashboard = () => {
     fetcher
   );
 
-  console.log("data: ", data);
-  console.log("error: ", error);
   if (session.status == "loading") {
     return <p>Loading</p>;
   }
@@ -58,9 +56,7 @@ const Dashboard = () => {
           // e.target.reset();
         });
       }
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   };
 
   const handleDelete = async (id: string) => {
